@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -18,11 +19,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView listToDos = (ListView)findViewById(R.id.mainMenuList);
+        ListView listToDos = (ListView) findViewById(R.id.mainMenuList);
         ArrayAdapter<ToDoItem> listAdapter;
         listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, itemList);
         listToDos.setAdapter(listAdapter);
 
+
+        AdapterView.OnItemClickListener itemClickListener = new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> listView, View v, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, ToDoDetailsActivity.class);
+                intent.putExtra(ToDoDetailsActivity.EXTRA_TODONO, (int) id);
+                startActivity(intent);
+            }
+        };
+        listToDos.setOnItemClickListener(itemClickListener);
     }
 
     public void onAddNewActivity(View view) {
