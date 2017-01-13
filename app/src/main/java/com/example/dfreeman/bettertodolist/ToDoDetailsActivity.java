@@ -1,7 +1,9 @@
 package com.example.dfreeman.bettertodolist;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -24,5 +26,13 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Display Name
         TextView name = (TextView)findViewById(R.id.displayName);
         name.setText(THIStoDoItem.getName());
+    }
+
+    public void onMarkDelete(View v) {
+        //Delete it
+
+        //Go back to menu
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
