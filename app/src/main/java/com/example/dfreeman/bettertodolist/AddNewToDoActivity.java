@@ -27,6 +27,15 @@ public class AddNewToDoActivity extends AppCompatActivity {
         String newTaskNameString = newTaskName.getText().toString();
         newToDo.setName(newTaskNameString);
 
+        //Set Start Cal
+
+        //Set Completion Cal
+
+        //Set Reminder Cal
+
+        //Set not Complete
+        newToDo.setComplete(false);
+
         //Submit new toDoItem
         MainActivity.itemList.add(newToDo);
 
