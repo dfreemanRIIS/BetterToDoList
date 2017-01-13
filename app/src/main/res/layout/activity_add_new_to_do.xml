@@ -22,11 +22,64 @@
         android:layout_alignParentStart="true" />
 
     <Button
+        android:id="@+id/pickStartDate"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/enter_name"
         android:text="Pick Start Date"
         android:onClick="showDatePickerDialog" />
+
+
+    <TextView
+        android:text="ShowsStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickStartDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/showsStartDate" />
+
+    <Button
+        android:text="Pick End Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showsStartDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/pickEndDate" />
+
+    <TextView
+        android:text="ShowsEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pickEndDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/showsEndDate" />
+
+    <Button
+        android:text="Set Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showsEndDate"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:id="@+id/setReminder" />
+
+    <TextView
+        android:text="Shows Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setReminder"
+        android:id="@+id/showsReminder" />
+
+    <Button
+        android:text="Clear Reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showsReminder"
+        android:id="@+id/clearReminder" />
 
     <Button
         android:text="Done"
