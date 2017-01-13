@@ -49,4 +49,8 @@ public class ToDoItem {
     public void setComplete(boolean complete) {
         this.complete = complete;
     }
+
+    public String toString() {
+        return this.name;
+    }
 }
