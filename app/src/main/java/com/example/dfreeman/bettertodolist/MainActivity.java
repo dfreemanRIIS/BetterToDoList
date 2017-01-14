@@ -14,6 +14,16 @@ public class MainActivity extends AppCompatActivity {
 
     public static ArrayList<ToDoItem> itemList = new ArrayList<>();
 
+    //Booleans to differentiate which calendar were setting
+    public static Boolean isStartCal = false;
+    public static Boolean isEndCal = false;
+    public static Boolean isRemCal = false;
+
+    //Store calendars until ToDoItem is created
+    public static DonsCalendar tempStartCal= new DonsCalendar(0,0,0);
+    public static DonsCalendar tempEndCal = new DonsCalendar(0,0,0);
+    public static DonsCalendar tempRemCal = new DonsCalendar(0,0,0);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

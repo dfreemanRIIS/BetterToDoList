@@ -32,7 +32,19 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     }
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
-        // Do something with the date chosen by the user
+        if(MainActivity.isStartCal){
+            MainActivity.tempStartCal.set(year, month, day);
+        }
+        if(MainActivity.isEndCal){
+            MainActivity.tempEndCal.set(year, month, day);
+        }
+        if(MainActivity.isRemCal){
+            MainActivity.tempRemCal.set(year, month, day);
+        }
+        //Reset for next Cal
+        MainActivity.isStartCal=false;
+        MainActivity.isEndCal=false;
+        MainActivity.isRemCal=false;
     }
 
 }

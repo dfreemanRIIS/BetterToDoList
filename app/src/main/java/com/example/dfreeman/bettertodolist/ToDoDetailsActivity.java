@@ -27,6 +27,14 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Display Name
         TextView name = (TextView)findViewById(R.id.displayName);
         name.setText(THIStoDoItem.getName());
+
+        //Displays Calendars
+        TextView start = (TextView)findViewById(R.id.showStartDate);
+        start.setText(THIStoDoItem.getStartCal().toString());
+        TextView end = (TextView)findViewById(R.id.showEndDate);
+        end.setText(THIStoDoItem.getFinishCal().toString());
+        TextView rem = (TextView)findViewById(R.id.showRemDate);
+        rem.setText(THIStoDoItem.getReminderCal().toString());
     }
 
     public void onMarkDelete(View v) {

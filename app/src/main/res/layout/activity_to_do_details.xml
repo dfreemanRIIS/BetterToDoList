@@ -36,4 +36,28 @@
         android:layout_alignParentEnd="true"
         android:id="@+id/markDelete"
         android:onClick="onMarkDelete"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/showStartDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showStartDate"
+        android:layout_marginTop="10dp"
+        android:id="@+id/showEndDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showEndDate"
+        android:layout_marginTop="10dp"
+        android:id="@+id/showRemDate" />
+
 </RelativeLayout>

@@ -1,7 +1,6 @@
 package com.example.dfreeman.bettertodolist;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 /**
  * Created by dfreeman
@@ -9,9 +8,9 @@ import java.util.Calendar;
 
 public class ToDoItem {
     private String name;
-    private Calendar startCal;
-    private Calendar finishCal;
-    private Calendar reminderCal;
+    private DonsCalendar startCal;
+    private DonsCalendar finishCal;
+    private DonsCalendar reminderCal;
     private boolean complete;
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd HH:mm:ss");
@@ -20,13 +19,13 @@ public class ToDoItem {
     public String getName() {
         return name;
     }
-    public Calendar getStartCal() {
+    public DonsCalendar getStartCal() {
         return startCal;
     }
-    public Calendar getFinishCal() {
+    public DonsCalendar getFinishCal() {
         return finishCal;
     }
-    public Calendar getReminderCal() {
+    public DonsCalendar getReminderCal() {
         return reminderCal;
     }
     public boolean isComplete() {
@@ -37,13 +36,13 @@ public class ToDoItem {
     public void setName(String name) {
         this.name = name;
     }
-    public void setStartCal(Calendar startCal) {
+    public void setStartCal(DonsCalendar startCal) {
         this.startCal = startCal;
     }
-    public void setFinishCal(Calendar finishCal) {
+    public void setFinishCal(DonsCalendar finishCal) {
         this.finishCal = finishCal;
     }
-    public void setReminderCal(Calendar reminderCal) {
+    public void setReminderCal(DonsCalendar reminderCal) {
         this.reminderCal = reminderCal;
     }
     public void setComplete(boolean complete) {

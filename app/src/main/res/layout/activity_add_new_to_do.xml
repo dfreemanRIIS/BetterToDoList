@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/enter_name"
         android:text="Pick Start Date"
-        android:onClick="showDatePickerDialog" />
+        android:onClick="showStartDatePickerDialog" />
 
 
     <TextView
@@ -41,6 +41,7 @@
         android:id="@+id/showsStartDate" />
 
     <Button
+        android:onClick="showEndDatePickerDialog"
         android:text="Pick End Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +49,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:id="@+id/pickEndDate" />
+        android:id="@+id/pickEndDate"/>
 
     <TextView
         android:text="ShowsEndDate"
@@ -60,6 +61,7 @@
         android:id="@+id/showsEndDate" />
 
     <Button
+        android:onClick="showRemDatePickerDialog"
         android:text="Set Reminder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
