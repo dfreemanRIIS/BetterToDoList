@@ -1,7 +1,5 @@
 package com.example.dfreeman.bettertodolist;
 
-import java.text.SimpleDateFormat;
-
 /**
  * Created by dfreeman
  */
@@ -12,8 +10,8 @@ public class ToDoItem {
     private DonsCalendar finishCal;
     private DonsCalendar reminderCal;
     private boolean complete;
-
-    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd HH:mm:ss");
+    private int hour;
+    private int min;
 
     //Getters
     public String getName() {
@@ -31,6 +29,12 @@ public class ToDoItem {
     public boolean isComplete() {
         return complete;
     }
+    public int getHour() {
+        return hour;
+    }
+    public int getMin() {
+        return min;
+    }
 
     //Setters
     public void setName(String name) {
@@ -47,6 +51,12 @@ public class ToDoItem {
     }
     public void setComplete(boolean complete) {
         this.complete = complete;
+    }
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+    public void setMin(int min) {
+        this.min = min;
     }
 
     public String toString() {

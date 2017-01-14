@@ -35,6 +35,10 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         end.setText(THIStoDoItem.getFinishCal().toString());
         TextView rem = (TextView)findViewById(R.id.showRemDate);
         rem.setText(THIStoDoItem.getReminderCal().toString());
+
+        //Display Time
+        TextView time = (TextView)findViewById(R.id.time);
+        time.setText(THIStoDoItem.getHour() + " " + THIStoDoItem.getMin());
     }
 
     public void onMarkDelete(View v) {

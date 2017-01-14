@@ -18,6 +18,8 @@ public class AddNewToDoActivity extends AppCompatActivity {
         MainActivity.tempStartCal.set(0,0,0);
         MainActivity.tempEndCal.set(0,0,0);
         MainActivity.tempRemCal.set(0,0,0);
+        MainActivity.hour = -1;
+        MainActivity.minute = -1;
 
         //Will need to delete old to do eventually ***
         //Edit changes will bring you here, delete old one ***
@@ -44,6 +46,10 @@ public class AddNewToDoActivity extends AppCompatActivity {
 
         //Set not Complete
         newToDo.setComplete(false);
+
+        //Add Time
+        newToDo.setHour(MainActivity.hour);
+        newToDo.setMin(MainActivity.minute);
 
         //Submit new toDoItem
         MainActivity.itemList.add(newToDo);

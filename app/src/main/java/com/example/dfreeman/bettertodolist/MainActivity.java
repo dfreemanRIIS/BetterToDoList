@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     public static DonsCalendar tempStartCal= new DonsCalendar(0,0,0);
     public static DonsCalendar tempEndCal = new DonsCalendar(0,0,0);
     public static DonsCalendar tempRemCal = new DonsCalendar(0,0,0);
+    public static int hour;
+    public static int minute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
