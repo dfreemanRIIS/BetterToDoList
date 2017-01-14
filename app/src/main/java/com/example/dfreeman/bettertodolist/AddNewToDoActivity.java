@@ -6,30 +6,35 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class AddNewToDoActivity extends AppCompatActivity {
+    //Create new toDoItem
+    private ToDoItem newToDo = new ToDoItem();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_to_do);
 
-        //In case the user does not enter any dates, set some defaults
-        MainActivity.tempStartCal.set(0,0,0);
-        MainActivity.tempEndCal.set(0,0,0);
-        MainActivity.tempRemCal.set(0,0,0);
-        MainActivity.hour = -1;
-        MainActivity.minute = -1;
+        //Check for existing obj from edit
+        if(MainActivity.editToDoTemp.getName() != "") {
+            newToDo = MainActivity.editToDoTemp;
 
-        //Will need to delete old to do eventually ***
-        //Edit changes will bring you here, delete old one ***
-        //New one will be added
+            //Set name
+            TextView name = (TextView)findViewById(R.id.enter_name);
+            name.setText(newToDo.getName());
+        } else {
+            //Default to blank
+            MainActivity.tempStartCal.set(0, 0, 0);
+            MainActivity.tempEndCal.set(0, 0, 0);
+            MainActivity.tempRemCal.set(0, 0, 0);
+            MainActivity.hour = -1;
+            MainActivity.minute = -1;
+        }
     }
 
     public void onDoneCreating(View view) {
-        //Create new toDoItem
-        ToDoItem newToDo = new ToDoItem();
-
         //Set Name
         EditText newTaskName = (EditText)findViewById(R.id.enter_name);
         String newTaskNameString = newTaskName.getText().toString();
@@ -53,6 +58,11 @@ public class AddNewToDoActivity extends AppCompatActivity {
 
         //Submit new toDoItem
         MainActivity.itemList.add(newToDo);
+
+        //Clear newToDo
+        newToDo = new ToDoItem();
+        //zero out temp edit
+        MainActivity.editToDoTemp = new ToDoItem();
 
         //Go back to menu
         Intent intent = new Intent(this, MainActivity.class);

@@ -91,4 +91,19 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void onEdit(View v) {
+        //Fetch object
+        int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
+        ToDoItem THIStoDoItem;
+        THIStoDoItem = MainActivity.itemList.get(toDoNo);
+
+        //Delete old object
+        MainActivity.itemList.remove(toDoNo);
+
+        //Pass new info into temp
+        MainActivity.editToDoTemp = THIStoDoItem;
+        Intent intent = new Intent(this, AddNewToDoActivity.class);
+        startActivity(intent);
+    }
 }
