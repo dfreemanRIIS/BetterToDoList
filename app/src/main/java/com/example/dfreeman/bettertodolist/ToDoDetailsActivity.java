@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +40,14 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Display Time
         TextView time = (TextView)findViewById(R.id.time);
         time.setText(THIStoDoItem.getHour() + " " + THIStoDoItem.getMin());
+
+        //Complete button setup
+        Button markComp = (Button)findViewById(R.id.markComplete);
+        if(THIStoDoItem.isComplete()) {
+            markComp.setText("Mark Incomplete");
+        } else {
+            markComp.setText("Mark Complete");
+        }
     }
 
     public void onMarkDelete(View v) {
@@ -51,6 +60,32 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Delete it
         Toast.makeText(this, "DELETE " + THISname, Toast.LENGTH_SHORT).show();
         MainActivity.itemList.remove(toDoNo);
+
+        //Go back to menu
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void onCompButtonClick(View v) {
+        //Fetch object number and name
+        int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
+        ToDoItem THIStoDoItem;
+        THIStoDoItem = MainActivity.itemList.get(toDoNo);
+        String THISname = THIStoDoItem.getName();
+
+        //Mark it complete or incomplete
+        if(THIStoDoItem.isComplete()) {
+            THIStoDoItem.setComplete(false);
+            Toast.makeText(this, THISname + " is now incomplete", Toast.LENGTH_SHORT).show();
+
+        } else {
+            THIStoDoItem.setComplete(true);
+            Toast.makeText(this, THISname + " is now complete", Toast.LENGTH_SHORT).show();
+        }
+
+        //Delete it and add it with new complete state
+        MainActivity.itemList.remove(toDoNo);
+        MainActivity.itemList.add(THIStoDoItem);
 
         //Go back to menu
         Intent intent = new Intent(this, MainActivity.class);

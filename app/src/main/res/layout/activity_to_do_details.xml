@@ -19,12 +19,12 @@
         android:id="@+id/displayName" />
 
     <Button
-        android:text="Mark Complete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:onClick="onCompButtonClick"
         android:id="@+id/markComplete" />
 
     <Button
