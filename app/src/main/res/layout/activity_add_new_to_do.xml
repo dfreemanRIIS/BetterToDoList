@@ -51,11 +51,19 @@
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:id="@+id/pickEndDate"/>
 
+    <Button
+        android:text="Pick End Time"
+        android:id="@+id/pickEndTime"
+        android:layout_below="@+id/pickEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showTimePickerDialog" />
+
     <TextView
         android:text="ShowsEndDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pickEndDate"
+        android:layout_below="@+id/pickEndTime"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:id="@+id/showsEndDate" />
