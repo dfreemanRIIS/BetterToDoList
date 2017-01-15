@@ -31,15 +31,19 @@ public class ToDoDetailsActivity extends AppCompatActivity {
 
         //Displays Calendars
         TextView start = (TextView)findViewById(R.id.showStartDate);
-        start.setText(THIStoDoItem.getStartCal().toString());
+        start.setText("Start date: " + THIStoDoItem.getStartCal().toString());
         TextView end = (TextView)findViewById(R.id.showEndDate);
-        end.setText(THIStoDoItem.getFinishCal().toString());
+        end.setText("End date: " + THIStoDoItem.getFinishCal().toString());
         TextView rem = (TextView)findViewById(R.id.showRemDate);
-        rem.setText(THIStoDoItem.getReminderCal().toString());
+        rem.setText("Reminder date: " + THIStoDoItem.getReminderCal().toString());
 
         //Display Time
         TextView time = (TextView)findViewById(R.id.time);
-        time.setText(THIStoDoItem.getHour() + " " + THIStoDoItem.getMin());
+        if (THIStoDoItem.getHour() == -1 && THIStoDoItem.getMin() == -1) {
+            time.setText("Time: No time selected!");
+        } else {
+            time.setText("Time: " + THIStoDoItem.getHour() + ":" + THIStoDoItem.getMin());
+        }
 
         //Complete button setup
         Button markComp = (Button)findViewById(R.id.markComplete);
