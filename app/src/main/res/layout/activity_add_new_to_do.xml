@@ -89,7 +89,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/showsReminder"
-        android:id="@+id/clearReminder" />
+        android:id="@+id/clearReminder"
+        android:onClick="onClearReminder" />
 
     <Button
         android:text="Done"

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AddNewToDoActivity extends AppCompatActivity {
     //Create new toDoItem
@@ -90,5 +91,10 @@ public class AddNewToDoActivity extends AppCompatActivity {
     public void showTimePickerDialog(View v) {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getSupportFragmentManager(), "timePicker");
+    }
+
+    public void onClearReminder(View v) {
+        MainActivity.tempRemCal.set(0, 0, 0);
+        Toast.makeText(this, "Reminder Cleared!", Toast.LENGTH_SHORT).show();
     }
 }
