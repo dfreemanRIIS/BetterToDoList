@@ -60,6 +60,10 @@ public class ToDoItem {
     }
 
     public String toString() {
-        return this.name;
+        if (complete) {
+            return this.name + " [COMPLETE]";
+        } else {
+            return this.name;
+        }
     }
 }
