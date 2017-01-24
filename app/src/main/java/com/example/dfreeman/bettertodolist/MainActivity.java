@@ -8,11 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
-
-    public static ArrayList<ToDoItem> itemList = new ArrayList<>();
 
     //Booleans to differentiate which calendar were setting
     public static Boolean isStartCal = false;
@@ -36,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         ListView listToDos = (ListView) findViewById(R.id.mainMenuList);
         ArrayAdapter<ToDoItem> listAdapter;
-        listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, itemList);
+        listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, ToDoItem.itemList);
         listToDos.setAdapter(listAdapter);
 
 

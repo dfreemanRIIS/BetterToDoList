@@ -23,7 +23,7 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Fetch object
         int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
-        THIStoDoItem = MainActivity.itemList.get(toDoNo);
+        THIStoDoItem = ToDoItem.itemList.get(toDoNo);
 
         //Display Name
         TextView name = (TextView)findViewById(R.id.displayName);
@@ -58,12 +58,12 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Fetch object number and name
         int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
-        THIStoDoItem = MainActivity.itemList.get(toDoNo);
+        THIStoDoItem = ToDoItem.itemList.get(toDoNo);
         String THISname = THIStoDoItem.getName();
 
         //Delete it
         Toast.makeText(this, "DELETE " + THISname, Toast.LENGTH_SHORT).show();
-        MainActivity.itemList.remove(toDoNo);
+        ToDoItem.itemList.remove(toDoNo);
 
         //Go back to menu
         Intent intent = new Intent(this, MainActivity.class);
@@ -74,7 +74,7 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Fetch object number and name
         int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
-        THIStoDoItem = MainActivity.itemList.get(toDoNo);
+        THIStoDoItem = ToDoItem.itemList.get(toDoNo);
         String THISname = THIStoDoItem.getName();
 
         //Mark it complete or incomplete
@@ -88,8 +88,8 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         }
 
         //Delete it and add it with new complete state
-        MainActivity.itemList.remove(toDoNo);
-        MainActivity.itemList.add(THIStoDoItem);
+        ToDoItem.itemList.remove(toDoNo);
+        ToDoItem.itemList.add(THIStoDoItem);
 
         //Go back to menu
         Intent intent = new Intent(this, MainActivity.class);
@@ -100,10 +100,10 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Fetch object
         int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
-        THIStoDoItem = MainActivity.itemList.get(toDoNo);
+        THIStoDoItem = ToDoItem.itemList.get(toDoNo);
 
         //Delete old object
-        MainActivity.itemList.remove(toDoNo);
+        ToDoItem.itemList.remove(toDoNo);
 
         //Pass new info into temp
         MainActivity.editToDoTemp = THIStoDoItem;

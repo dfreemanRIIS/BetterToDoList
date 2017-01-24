@@ -58,7 +58,7 @@ public class AddNewToDoActivity extends AppCompatActivity {
         newToDo.setMin(MainActivity.minute);
 
         //Submit new toDoItem
-        MainActivity.itemList.add(newToDo);
+        ToDoItem.itemList.add(newToDo);
 
         //Clear newToDo
         newToDo = new ToDoItem();

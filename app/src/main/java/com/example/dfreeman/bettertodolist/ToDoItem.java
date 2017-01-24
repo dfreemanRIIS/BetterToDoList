@@ -1,5 +1,7 @@
 package com.example.dfreeman.bettertodolist;
 
+import java.util.ArrayList;
+
 /**
  * Created by dfreeman
  */
@@ -12,6 +14,9 @@ public class ToDoItem {
     private boolean complete;
     private int hour;
     private int min;
+
+    //Array of toDoItems
+    public static ArrayList<ToDoItem> itemList = new ArrayList<>();
 
     //Getters
     public String getName() {
