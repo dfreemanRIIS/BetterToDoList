@@ -17,6 +17,8 @@ public class ToDoItem {
 
     //Array of toDoItems
     public static ArrayList<ToDoItem> itemList = new ArrayList<>();
+    //Stores temp obj for edit
+    public static ToDoItem editToDoTemp = new ToDoItem();
 
     //Getters
     public String getName() {

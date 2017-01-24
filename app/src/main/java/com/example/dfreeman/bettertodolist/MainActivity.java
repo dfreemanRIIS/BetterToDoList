@@ -22,9 +22,6 @@ public class MainActivity extends AppCompatActivity {
     public static int hour = -1;
     public static int minute = -1;
 
-    //Stores temp obj for edit
-    public static ToDoItem editToDoTemp = new ToDoItem();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -19,8 +19,8 @@ public class AddNewToDoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_new_to_do);
 
         //Check for existing obj from edit
-        if(MainActivity.editToDoTemp.getName() != "") {
-            newToDo = MainActivity.editToDoTemp;
+        if(ToDoItem.editToDoTemp.getName() != "") {
+            newToDo = ToDoItem.editToDoTemp;
 
             //Set name
             TextView name = (TextView)findViewById(R.id.enter_name);
@@ -63,7 +63,7 @@ public class AddNewToDoActivity extends AppCompatActivity {
         //Clear newToDo
         newToDo = new ToDoItem();
         //zero out temp edit
-        MainActivity.editToDoTemp = new ToDoItem();
+        ToDoItem.editToDoTemp = new ToDoItem();
 
         //Go back to menu
         Intent intent = new Intent(this, MainActivity.class);

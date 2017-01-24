@@ -106,7 +106,7 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         ToDoItem.itemList.remove(toDoNo);
 
         //Pass new info into temp
-        MainActivity.editToDoTemp = THIStoDoItem;
+        ToDoItem.editToDoTemp = THIStoDoItem;
         Intent intent = new Intent(this, AddNewToDoActivity.class);
         startActivity(intent);
     }
