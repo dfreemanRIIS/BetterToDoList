@@ -13,11 +13,6 @@ public class MainActivity extends AppCompatActivity {
     //Boolean for is edit
     public static boolean isEditing;
 
-    //Booleans to differentiate which calendar were setting
-    public static Boolean isStartCal = false;
-    public static Boolean isEndCal = false;
-    public static Boolean isRemCal = false;
-
     //Store calendars until ToDoItem is created
     public static final DonsCalendar tempStartCal= new DonsCalendar(0,0,0);
     public static final DonsCalendar tempEndCal = new DonsCalendar(0,0,0);

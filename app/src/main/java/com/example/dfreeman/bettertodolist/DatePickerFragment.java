@@ -10,9 +10,10 @@ import java.util.Calendar;
 
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
-    public static boolean isRemDate = false;
-    public static boolean isStartDate = false;
-    public static boolean isCompDate = false;
+    //Booleans to differentiate which calendar were setting
+    public static boolean isRemCal = false;
+    public static boolean isStartCal = false;
+    public static boolean isEndCal = false;
 
     @Override @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -27,19 +28,19 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     }
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
-        if(MainActivity.isStartCal){
+        if(isStartCal){
             MainActivity.tempStartCal.set(year, month, day);
         }
-        if(MainActivity.isEndCal){
+        if(isEndCal){
             MainActivity.tempEndCal.set(year, month, day);
         }
-        if(MainActivity.isRemCal){
+        if(isRemCal){
             MainActivity.tempRemCal.set(year, month, day);
         }
         //Reset for next Cal
-        MainActivity.isStartCal=false;
-        MainActivity.isEndCal=false;
-        MainActivity.isRemCal=false;
+        isStartCal = false;
+        isEndCal = false;
+        isRemCal =false;
     }
 
 }

@@ -105,15 +105,15 @@ public class AddNewToDoActivity extends AppCompatActivity {
     }
     //So DatePicker only sets the right calendar
     public void showStartDatePickerDialog(View v) {
-        MainActivity.isStartCal=true;
+        DatePickerFragment.isStartCal=true;
         showDatePickerDialog(v);
     }
     public void showEndDatePickerDialog(View v) {
-        MainActivity.isEndCal=true;
+        DatePickerFragment.isEndCal=true;
         showDatePickerDialog(v);
     }
     public void showRemDatePickerDialog(View v) {
-        MainActivity.isRemCal=true;
+        DatePickerFragment.isRemCal=true;
         showDatePickerDialog(v);
     }
 
