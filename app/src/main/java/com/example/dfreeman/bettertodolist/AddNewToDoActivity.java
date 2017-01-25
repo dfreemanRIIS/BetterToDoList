@@ -19,12 +19,15 @@ public class AddNewToDoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_new_to_do);
 
         //Check for existing obj from edit
-        if(ToDoItem.editToDoTemp.getName() != "") {
+        if(MainActivity.isEditing) {
             newToDo = ToDoItem.editToDoTemp;
 
             //Set name
             TextView name = (TextView)findViewById(R.id.enter_name);
             name.setText(newToDo.getName());
+
+            //Reset the editing bool
+            MainActivity.isEditing = false;
         } else {
             //Default to blank
             MainActivity.tempStartCal.set(0, 0, 0);
@@ -32,6 +35,9 @@ public class AddNewToDoActivity extends AppCompatActivity {
             MainActivity.tempRemCal.set(0, 0, 0);
             MainActivity.hour = -1;
             MainActivity.minute = -1;
+
+            //Reset the editing bool
+            MainActivity.isEditing = false;
         }
     }
 

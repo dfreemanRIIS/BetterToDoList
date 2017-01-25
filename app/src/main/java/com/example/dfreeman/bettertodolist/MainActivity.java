@@ -10,6 +10,9 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Boolean for is edit
+    public static boolean isEditing;
+
     //Booleans to differentiate which calendar were setting
     public static Boolean isStartCal = false;
     public static Boolean isEndCal = false;

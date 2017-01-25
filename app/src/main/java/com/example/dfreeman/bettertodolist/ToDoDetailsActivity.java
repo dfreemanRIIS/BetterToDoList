@@ -105,6 +105,9 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Delete old object
         ToDoItem.itemList.remove(toDoNo);
 
+        //Let the form know his is an edit
+        MainActivity.isEditing = true;
+
         //Pass new info into temp
         ToDoItem.editToDoTemp = THIStoDoItem;
         Intent intent = new Intent(this, AddNewToDoActivity.class);
