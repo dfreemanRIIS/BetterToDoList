@@ -18,7 +18,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -36,7 +35,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pickStartDate"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:id="@+id/pickEndDate"/>
@@ -71,7 +69,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:id="@+id/done_creating"
         android:onClick="onDoneCreating"/>
@@ -81,7 +78,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/pickStartDate"
-        android:layout_toRightOf="@+id/pickStartDate"
         android:layout_toEndOf="@+id/pickStartDate"
         android:layout_marginBottom="14dp"
         android:id="@+id/startDate" />
@@ -91,7 +87,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/pickEndDate"
-        android:layout_toRightOf="@+id/pickEndDate"
         android:layout_toEndOf="@+id/pickEndDate"
         android:layout_marginBottom="14dp"
         android:id="@+id/endDate" />
@@ -100,7 +95,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/pickEndTime"
-        android:layout_toRightOf="@+id/pickEndTime"
         android:layout_toEndOf="@+id/pickEndTime"
         android:layout_marginBottom="14dp"
         android:id="@+id/endTime" />
@@ -109,7 +103,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/setReminder"
-        android:layout_toRightOf="@+id/setReminder"
         android:layout_toEndOf="@+id/setReminder"
         android:layout_marginBottom="14dp"
         android:id="@+id/reminder" />
