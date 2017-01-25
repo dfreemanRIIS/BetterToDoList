@@ -8,10 +8,6 @@ import android.app.Dialog;
 import android.os.Bundle;
 import java.util.Calendar;
 
-/**
- * Created by dfreeman
- */
-
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
     public static boolean isRemDate = false;

@@ -1,9 +1,5 @@
 package com.example.dfreeman.bettertodolist;
 
-/**
- * Created by dfreeman
- */
-
 public class DonsCalendar {
     private int year;
     private int month;

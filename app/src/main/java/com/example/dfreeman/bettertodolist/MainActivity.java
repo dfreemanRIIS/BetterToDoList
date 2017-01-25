@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
     public static Boolean isRemCal = false;
 
     //Store calendars until ToDoItem is created
-    public static DonsCalendar tempStartCal= new DonsCalendar(0,0,0);
-    public static DonsCalendar tempEndCal = new DonsCalendar(0,0,0);
-    public static DonsCalendar tempRemCal = new DonsCalendar(0,0,0);
+    public static final DonsCalendar tempStartCal= new DonsCalendar(0,0,0);
+    public static final DonsCalendar tempEndCal = new DonsCalendar(0,0,0);
+    public static final DonsCalendar tempRemCal = new DonsCalendar(0,0,0);
     public static int hour = -1;
     public static int minute = -1;
 

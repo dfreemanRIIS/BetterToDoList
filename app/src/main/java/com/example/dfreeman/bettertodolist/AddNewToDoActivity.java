@@ -117,7 +117,7 @@ public class AddNewToDoActivity extends AppCompatActivity {
         showDatePickerDialog(v);
     }
 
-    public void showDatePickerDialog(View v) {
+    private void showDatePickerDialog(View v) {
         DialogFragment newFragment = new DatePickerFragment();
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }

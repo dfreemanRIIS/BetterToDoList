@@ -56,10 +56,10 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
         THIStoDoItem = ToDoItem.itemList.get(toDoNo);
-        String THISname = THIStoDoItem.getName();
+        String thisName = THIStoDoItem.getName();
 
         //Delete it
-        Toast.makeText(this, "DELETE " + THISname, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "DELETE " + thisName, Toast.LENGTH_SHORT).show();
         ToDoItem.itemList.remove(toDoNo);
 
         //Go back to menu
@@ -72,16 +72,16 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
         THIStoDoItem = ToDoItem.itemList.get(toDoNo);
-        String THISname = THIStoDoItem.getName();
+        String thisName = THIStoDoItem.getName();
 
         //Mark it complete or incomplete
         if(THIStoDoItem.isComplete()) {
             THIStoDoItem.setComplete(false);
-            Toast.makeText(this, THISname + " is now incomplete", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, thisName + " is now incomplete", Toast.LENGTH_SHORT).show();
 
         } else {
             THIStoDoItem.setComplete(true);
-            Toast.makeText(this, THISname + " is now complete", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, thisName + " is now complete", Toast.LENGTH_SHORT).show();
         }
 
         //Delete it and add it with new complete state

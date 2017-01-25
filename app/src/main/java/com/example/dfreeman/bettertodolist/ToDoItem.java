@@ -2,10 +2,6 @@ package com.example.dfreeman.bettertodolist;
 
 import java.util.ArrayList;
 
-/**
- * Created by dfreeman
- */
-
 public class ToDoItem {
     private String name;
     private DonsCalendar startCal;
@@ -16,7 +12,7 @@ public class ToDoItem {
     private int min;
 
     //Array of toDoItems
-    public static ArrayList<ToDoItem> itemList = new ArrayList<>();
+    public static final ArrayList<ToDoItem> itemList = new ArrayList<>();
     //Stores temp obj for edit
     public static ToDoItem editToDoTemp = new ToDoItem();
 
