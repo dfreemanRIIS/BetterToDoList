@@ -13,7 +13,7 @@
     <EditText
         android:id="@+id/enter_name"
         android:inputType="textPersonName"
-        android:hint="Enter to do name"
+        android:hint="@string/enterToDoName"
         android:ems="10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,12 +26,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/enter_name"
-        android:text="Pick Start Date"
+        android:text="@string/pickStartDate"
         android:onClick="showStartDatePickerDialog" />
 
     <Button
         android:onClick="showEndDatePickerDialog"
-        android:text="Pick End Date"
+        android:text="@string/pickEndDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pickStartDate"
@@ -40,7 +40,7 @@
         android:id="@+id/pickEndDate"/>
 
     <Button
-        android:text="Pick End Time"
+        android:text="@string/pickEndTime"
         android:id="@+id/pickEndTime"
         android:layout_below="@+id/pickEndDate"
         android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
 
     <Button
         android:onClick="showRemDatePickerDialog"
-        android:text="Set Reminder"
+        android:text="@string/setReminder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pickEndTime"
@@ -57,7 +57,7 @@
         android:id="@+id/setReminder" />
 
     <Button
-        android:text="Clear Reminder"
+        android:text="@string/clearReminder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/setReminder"
@@ -65,7 +65,7 @@
         android:onClick="onClearReminder" />
 
     <Button
-        android:text="Done"
+        android:text="@string/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

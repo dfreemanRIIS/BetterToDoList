@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">BetterToDoList</string>
+    <string name="enterToDoName">Enter to do name</string>
+    <string name="addNew">Add New</string>
+    <string name="pickStartDate">Pick Start Date</string>
+    <string name="delete">Delete</string>
+    <string name="pickEndDate">Pick End Date</string>
+    <string name="pickEndTime">Pick End Time</string>
+    <string name="setReminder">Set Reminder</string>
+    <string name="clearReminder">Clear Reminder</string>
+    <string name="done">Done</string>
+    <string name="edit">Edit</string>
+
 </resources>
