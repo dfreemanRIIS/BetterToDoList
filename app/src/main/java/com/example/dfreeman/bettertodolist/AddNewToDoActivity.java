@@ -26,6 +26,22 @@ public class AddNewToDoActivity extends AppCompatActivity {
             TextView name = (TextView)findViewById(R.id.enter_name);
             name.setText(newToDo.getName());
 
+            //Displays Calendars
+            TextView start = (TextView)findViewById(R.id.startDate);
+            start.setText("Start date: " + newToDo.getStartCal().toString());
+            TextView end = (TextView)findViewById(R.id.endDate);
+            end.setText("End date: " + newToDo.getFinishCal().toString());
+            TextView rem = (TextView)findViewById(R.id.reminder);
+            rem.setText("Reminder date: " + newToDo.getReminderCal().toString());
+
+            //Display Time
+            TextView time = (TextView)findViewById(R.id.endTime);
+            if (newToDo.getHour() == -1 && newToDo.getMin() == -1) {
+                time.setText("Time: No time selected!");
+            } else {
+                time.setText("Time: " + newToDo.getHour() + ":" + newToDo.getMin());
+            }
+
             //Reset the editing bool
             MainActivity.isEditing = false;
         } else {
@@ -35,6 +51,18 @@ public class AddNewToDoActivity extends AppCompatActivity {
             MainActivity.tempRemCal.set(0, 0, 0);
             MainActivity.hour = -1;
             MainActivity.minute = -1;
+
+            //Default Calendars
+            TextView start = (TextView)findViewById(R.id.startDate);
+            start.setText("Start date: No date selected!");
+            TextView end = (TextView)findViewById(R.id.endDate);
+            end.setText("End date: No date selected!");
+            TextView rem = (TextView)findViewById(R.id.reminder);
+            rem.setText("Reminder date: No date selected!");
+
+            //Default Time
+            TextView time = (TextView)findViewById(R.id.endTime);
+            time.setText("Time: No time selected!");
 
             //Reset the editing bool
             MainActivity.isEditing = false;

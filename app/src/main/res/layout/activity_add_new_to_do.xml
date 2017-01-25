@@ -76,4 +76,42 @@
         android:id="@+id/done_creating"
         android:onClick="onDoneCreating"/>
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pickStartDate"
+        android:layout_toRightOf="@+id/pickStartDate"
+        android:layout_toEndOf="@+id/pickStartDate"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/startDate" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pickEndDate"
+        android:layout_toRightOf="@+id/pickEndDate"
+        android:layout_toEndOf="@+id/pickEndDate"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/endDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pickEndTime"
+        android:layout_toRightOf="@+id/pickEndTime"
+        android:layout_toEndOf="@+id/pickEndTime"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/endTime" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/setReminder"
+        android:layout_toRightOf="@+id/setReminder"
+        android:layout_toEndOf="@+id/setReminder"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/reminder" />
+
 </RelativeLayout>
