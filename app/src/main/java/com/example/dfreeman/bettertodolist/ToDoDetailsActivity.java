@@ -8,12 +8,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
-
 public class ToDoDetailsActivity extends AppCompatActivity {
 
     public static final String EXTRA_TODONO = "toDoNumber";
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd HH:mm:ss");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

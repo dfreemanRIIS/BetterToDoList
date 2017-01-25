@@ -7,7 +7,6 @@ import android.support.v4.app.DialogFragment;
 import android.app.Dialog;
 import android.os.Bundle;
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 /**
  * Created by dfreeman
