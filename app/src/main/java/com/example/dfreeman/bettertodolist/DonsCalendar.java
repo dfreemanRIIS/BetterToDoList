@@ -5,10 +5,10 @@ public class DonsCalendar {
     private int month;
     private int day;
 
-    public DonsCalendar(int year, int month, int day) {
-        this.year = year;
-        this.month = month;
-        this.day = day;
+    public DonsCalendar() {
+        this.year = 0;
+        this.month = 0;
+        this.day = 0;
     }
 
     //All Setter

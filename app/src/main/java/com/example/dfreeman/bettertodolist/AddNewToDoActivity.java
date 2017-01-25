@@ -76,13 +76,13 @@ public class AddNewToDoActivity extends AppCompatActivity {
         newToDo.setName(newTaskNameString);
 
         //Set Start Cal
-        newToDo.setStartCal(MainActivity.tempStartCal);
+        newToDo.setStartCal();
 
         //Set Completion Cal
-        newToDo.setFinishCal(MainActivity.tempEndCal);
+        newToDo.setFinishCal();
 
         //Set Reminder Cal
-        newToDo.setReminderCal(MainActivity.tempRemCal);
+        newToDo.setReminderCal();
 
         //Set not Complete
         newToDo.setComplete(false);

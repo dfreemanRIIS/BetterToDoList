@@ -43,14 +43,14 @@ public class ToDoItem {
     public void setName(String name) {
         this.name = name;
     }
-    public void setStartCal(DonsCalendar startCal) {
-        this.startCal = startCal;
+    public void setStartCal() {
+        this.startCal = MainActivity.tempStartCal;
     }
-    public void setFinishCal(DonsCalendar finishCal) {
-        this.finishCal = finishCal;
+    public void setFinishCal() {
+        this.finishCal = MainActivity.tempEndCal;
     }
-    public void setReminderCal(DonsCalendar reminderCal) {
-        this.reminderCal = reminderCal;
+    public void setReminderCal() {
+        this.reminderCal = MainActivity.tempRemCal;
     }
     public void setComplete(boolean complete) {
         this.complete = complete;
