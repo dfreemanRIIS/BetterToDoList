@@ -3,7 +3,6 @@ package com.example.dfreeman.bettertodolist;
 import com.example.dfreeman.bettertodolist.model.DonsCalendar;
 import com.example.dfreeman.bettertodolist.model.ToDoItem;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,16 +10,11 @@ import static org.junit.Assert.*;
 
 public class ToDoItemTest {
 
-    ToDoItem toDoItem;
+    private ToDoItem toDoItem;
 
     @Before
     public void setUp() throws Exception {
         toDoItem = new ToDoItem();
-    }
-
-    @After
-    public void tearDown() throws Exception {
-        //Nothing to tear down!
     }
 
     @Test

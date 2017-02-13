@@ -33,16 +33,20 @@ public class AddNewToDoActivity extends AppCompatActivity {
 
             //Displays Calendars
             TextView start = (TextView)findViewById(R.id.startDate);
-            start.setText("Start date: " + newToDo.getStartCal().toString());
+            String startText = "Start date: " + newToDo.getStartCal().toString();
+            start.setText(startText);
             TextView end = (TextView)findViewById(R.id.endDate);
-            end.setText("End date: " + newToDo.getFinishCal().toString());
+            String endText = "End date: " + newToDo.getFinishCal().toString();
+            end.setText(endText);
             TextView rem = (TextView)findViewById(R.id.reminder);
-            rem.setText("Reminder date: " + newToDo.getReminderCal().toString());
+            String remText = "Reminder date: " + newToDo.getReminderCal().toString();
+            rem.setText(remText);
 
             //Display Time
             TextView time = (TextView)findViewById(R.id.endTime);
             if (newToDo.getHour() == -1 && newToDo.getMin() == -1) {
-                time.setText("Time: No time selected!");
+                String noTime= "Time: No time selected!";
+                time.setText(noTime);
             } else {
                 time.setText("Time: " + newToDo.getHour() + ":" + newToDo.getMin());
             }
@@ -59,15 +63,19 @@ public class AddNewToDoActivity extends AppCompatActivity {
 
             //Default Calendars
             TextView start = (TextView)findViewById(R.id.startDate);
-            start.setText("Start date: No date selected!");
+            String startText = "Start date: No date selected!";
+            start.setText(startText);
             TextView end = (TextView)findViewById(R.id.endDate);
-            end.setText("End date: No date selected!");
+            String endText = "End date: No date selected!";
+            end.setText(endText);
             TextView rem = (TextView)findViewById(R.id.reminder);
-            rem.setText("Reminder date: No date selected!");
+            String remText = "Reminder date: No date selected!";
+            rem.setText(remText);
 
             //Default Time
             TextView time = (TextView)findViewById(R.id.endTime);
-            time.setText("Time: No time selected!");
+            String noTime = "Time: No time selected!";
+            time.setText(noTime);
 
             //Reset the editing bool
             MainActivity.isEditing = false;

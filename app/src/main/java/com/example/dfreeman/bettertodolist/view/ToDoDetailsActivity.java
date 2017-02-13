@@ -10,8 +10,6 @@ import android.widget.Toast;
 
 import com.example.dfreeman.bettertodolist.R;
 import com.example.dfreeman.bettertodolist.model.ToDoItem;
-import com.example.dfreeman.bettertodolist.view.AddNewToDoActivity;
-import com.example.dfreeman.bettertodolist.view.MainActivity;
 
 public class ToDoDetailsActivity extends AppCompatActivity {
 
@@ -33,16 +31,20 @@ public class ToDoDetailsActivity extends AppCompatActivity {
 
         //Displays Calendars
         TextView start = (TextView)findViewById(R.id.showStartDate);
-        start.setText("Start date: " + THIStoDoItem.getStartCal().toString());
+        String startText = "Start date: " + THIStoDoItem.getStartCal().toString();
+        start.setText(startText);
         TextView end = (TextView)findViewById(R.id.showEndDate);
-        end.setText("End date: " + THIStoDoItem.getFinishCal().toString());
+        String endText = "End date: " + THIStoDoItem.getFinishCal().toString();
+        end.setText(endText);
         TextView rem = (TextView)findViewById(R.id.showRemDate);
-        rem.setText("Reminder date: " + THIStoDoItem.getReminderCal().toString());
+        String remText = "Reminder date: " + THIStoDoItem.getReminderCal().toString();
+        rem.setText(remText);
 
         //Display Time
         TextView time = (TextView)findViewById(R.id.time);
         if (THIStoDoItem.getHour() == -1 && THIStoDoItem.getMin() == -1) {
-            time.setText("Time: No time selected!");
+            String setTimeText = "Time: No time selected!";
+            time.setText(setTimeText);
         } else {
             time.setText("Time: " + THIStoDoItem.getHour() + ":" + THIStoDoItem.getMin());
         }
@@ -50,9 +52,11 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         //Complete button setup
         Button markComp = (Button)findViewById(R.id.markComplete);
         if(THIStoDoItem.isComplete()) {
-            markComp.setText("Mark Incomplete");
+            String markText = "Mark Incomplete";
+            markComp.setText(markText);
         } else {
-            markComp.setText("Mark Complete");
+            String markText = "Mark Complete";
+            markComp.setText(markText);
         }
     }
 

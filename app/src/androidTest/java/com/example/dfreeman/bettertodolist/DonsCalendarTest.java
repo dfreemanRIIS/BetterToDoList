@@ -2,7 +2,6 @@ package com.example.dfreeman.bettertodolist;
 
 import com.example.dfreeman.bettertodolist.model.DonsCalendar;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,20 +9,15 @@ import static org.junit.Assert.*;
 
 public class DonsCalendarTest {
 
-    DonsCalendar donsCalendar1;
-    DonsCalendar donsCalendar2;
-    DonsCalendar donsCalendar3;
+    private DonsCalendar donsCalendar1;
+    private DonsCalendar donsCalendar2;
+    private DonsCalendar donsCalendar3;
 
     @Before
     public void setUp() throws Exception {
         donsCalendar1 = new DonsCalendar();
         donsCalendar2 = new DonsCalendar();
         donsCalendar3 = new DonsCalendar();
-    }
-
-    @After
-    public void tearDown() throws Exception {
-        //Nothing to tear down!
     }
 
     @Test
