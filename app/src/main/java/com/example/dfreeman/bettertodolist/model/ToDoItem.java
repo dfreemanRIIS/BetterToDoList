@@ -22,21 +22,27 @@ public class ToDoItem {
     public String getName() {
         return name;
     }
+
     public DonsCalendar getStartCal() {
         return startCal;
     }
+
     public DonsCalendar getFinishCal() {
         return finishCal;
     }
+
     public DonsCalendar getReminderCal() {
         return reminderCal;
     }
+
     public boolean isComplete() {
         return complete;
     }
+
     public int getHour() {
         return hour;
     }
+
     public int getMin() {
         return min;
     }
@@ -45,21 +51,27 @@ public class ToDoItem {
     public void setName(String name) {
         this.name = name;
     }
+
     public void setStartCal() {
         this.startCal = MainActivity.tempStartCal;
     }
+
     public void setFinishCal() {
         this.finishCal = MainActivity.tempEndCal;
     }
+
     public void setReminderCal() {
         this.reminderCal = MainActivity.tempRemCal;
     }
+
     public void setComplete(boolean complete) {
         this.complete = complete;
     }
+
     public void setHour(int hour) {
         this.hour = hour;
     }
+
     public void setMin(int min) {
         this.min = min;
     }

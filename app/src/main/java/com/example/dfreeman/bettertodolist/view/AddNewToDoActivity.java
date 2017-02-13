@@ -24,28 +24,28 @@ public class AddNewToDoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_new_to_do);
 
         //Check for existing obj from edit
-        if(MainActivity.isEditing) {
+        if (MainActivity.isEditing) {
             newToDo = ToDoItem.editToDoTemp;
 
             //Set name
-            TextView name = (TextView)findViewById(R.id.enter_name);
+            TextView name = (TextView) findViewById(R.id.enter_name);
             name.setText(newToDo.getName());
 
             //Displays Calendars
-            TextView start = (TextView)findViewById(R.id.startDate);
+            TextView start = (TextView) findViewById(R.id.startDate);
             String startText = "Start date: " + newToDo.getStartCal().toString();
             start.setText(startText);
-            TextView end = (TextView)findViewById(R.id.endDate);
+            TextView end = (TextView) findViewById(R.id.endDate);
             String endText = "End date: " + newToDo.getFinishCal().toString();
             end.setText(endText);
-            TextView rem = (TextView)findViewById(R.id.reminder);
+            TextView rem = (TextView) findViewById(R.id.reminder);
             String remText = "Reminder date: " + newToDo.getReminderCal().toString();
             rem.setText(remText);
 
             //Display Time
-            TextView time = (TextView)findViewById(R.id.endTime);
+            TextView time = (TextView) findViewById(R.id.endTime);
             if (newToDo.getHour() == -1 && newToDo.getMin() == -1) {
-                String noTime= "Time: No time selected!";
+                String noTime = "Time: No time selected!";
                 time.setText(noTime);
             } else {
                 time.setText("Time: " + newToDo.getHour() + ":" + newToDo.getMin());
@@ -62,18 +62,18 @@ public class AddNewToDoActivity extends AppCompatActivity {
             MainActivity.minute = -1;
 
             //Default Calendars
-            TextView start = (TextView)findViewById(R.id.startDate);
+            TextView start = (TextView) findViewById(R.id.startDate);
             String startText = "Start date: No date selected!";
             start.setText(startText);
-            TextView end = (TextView)findViewById(R.id.endDate);
+            TextView end = (TextView) findViewById(R.id.endDate);
             String endText = "End date: No date selected!";
             end.setText(endText);
-            TextView rem = (TextView)findViewById(R.id.reminder);
+            TextView rem = (TextView) findViewById(R.id.reminder);
             String remText = "Reminder date: No date selected!";
             rem.setText(remText);
 
             //Default Time
-            TextView time = (TextView)findViewById(R.id.endTime);
+            TextView time = (TextView) findViewById(R.id.endTime);
             String noTime = "Time: No time selected!";
             time.setText(noTime);
 
@@ -84,7 +84,7 @@ public class AddNewToDoActivity extends AppCompatActivity {
 
     public void onDoneCreating(View view) {
         //Set Name
-        EditText newTaskName = (EditText)findViewById(R.id.enter_name);
+        EditText newTaskName = (EditText) findViewById(R.id.enter_name);
         String newTaskNameString = newTaskName.getText().toString();
         newToDo.setName(newTaskNameString);
 
@@ -116,17 +116,20 @@ public class AddNewToDoActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
     //So DatePicker only sets the right calendar
     public void showStartDatePickerDialog(View v) {
-        DatePickerFragment.isStartCal=true;
+        DatePickerFragment.isStartCal = true;
         showDatePickerDialog(v);
     }
+
     public void showEndDatePickerDialog(View v) {
-        DatePickerFragment.isEndCal=true;
+        DatePickerFragment.isEndCal = true;
         showDatePickerDialog(v);
     }
+
     public void showRemDatePickerDialog(View v) {
-        DatePickerFragment.isRemCal=true;
+        DatePickerFragment.isRemCal = true;
         showDatePickerDialog(v);
     }
 

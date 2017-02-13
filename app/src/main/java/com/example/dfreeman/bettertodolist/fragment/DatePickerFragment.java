@@ -18,7 +18,8 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     public static boolean isStartCal = false;
     public static boolean isEndCal = false;
 
-    @Override @NonNull
+    @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         // Use the current date as the default date in the picker
         final Calendar c = Calendar.getInstance();
@@ -31,19 +32,19 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     }
 
     public void onDateSet(DatePicker view, int year, int month, int day) {
-        if(isStartCal){
+        if (isStartCal) {
             MainActivity.tempStartCal.set(year, month, day);
         }
-        if(isEndCal){
+        if (isEndCal) {
             MainActivity.tempEndCal.set(year, month, day);
         }
-        if(isRemCal){
+        if (isRemCal) {
             MainActivity.tempRemCal.set(year, month, day);
         }
         //Reset for next Cal
         isStartCal = false;
         isEndCal = false;
-        isRemCal =false;
+        isRemCal = false;
     }
 
 }

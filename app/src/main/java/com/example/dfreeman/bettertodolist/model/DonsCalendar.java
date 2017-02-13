@@ -57,7 +57,7 @@ public class DonsCalendar {
             monthString = "Dec";
         }
 
-        if(year == 0 && month == 0 && day == 0) {
+        if (year == 0 && month == 0 && day == 0) {
             return "No date selected!";
         }
 

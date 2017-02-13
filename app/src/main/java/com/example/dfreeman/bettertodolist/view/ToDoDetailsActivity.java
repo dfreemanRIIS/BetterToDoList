@@ -21,27 +21,27 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_to_do_details);
 
         //Fetch object
-        int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
+        int toDoNo = (Integer) getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
         THIStoDoItem = ToDoItem.itemList.get(toDoNo);
 
         //Display Name
-        TextView name = (TextView)findViewById(R.id.displayName);
+        TextView name = (TextView) findViewById(R.id.displayName);
         name.setText(THIStoDoItem.getName());
 
         //Displays Calendars
-        TextView start = (TextView)findViewById(R.id.showStartDate);
+        TextView start = (TextView) findViewById(R.id.showStartDate);
         String startText = "Start date: " + THIStoDoItem.getStartCal().toString();
         start.setText(startText);
-        TextView end = (TextView)findViewById(R.id.showEndDate);
+        TextView end = (TextView) findViewById(R.id.showEndDate);
         String endText = "End date: " + THIStoDoItem.getFinishCal().toString();
         end.setText(endText);
-        TextView rem = (TextView)findViewById(R.id.showRemDate);
+        TextView rem = (TextView) findViewById(R.id.showRemDate);
         String remText = "Reminder date: " + THIStoDoItem.getReminderCal().toString();
         rem.setText(remText);
 
         //Display Time
-        TextView time = (TextView)findViewById(R.id.time);
+        TextView time = (TextView) findViewById(R.id.time);
         if (THIStoDoItem.getHour() == -1 && THIStoDoItem.getMin() == -1) {
             String setTimeText = "Time: No time selected!";
             time.setText(setTimeText);
@@ -50,8 +50,8 @@ public class ToDoDetailsActivity extends AppCompatActivity {
         }
 
         //Complete button setup
-        Button markComp = (Button)findViewById(R.id.markComplete);
-        if(THIStoDoItem.isComplete()) {
+        Button markComp = (Button) findViewById(R.id.markComplete);
+        if (THIStoDoItem.isComplete()) {
             String markText = "Mark Incomplete";
             markComp.setText(markText);
         } else {
@@ -62,7 +62,7 @@ public class ToDoDetailsActivity extends AppCompatActivity {
 
     public void onMarkDelete(View v) {
         //Fetch object number and name
-        int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
+        int toDoNo = (Integer) getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
         THIStoDoItem = ToDoItem.itemList.get(toDoNo);
         String thisName = THIStoDoItem.getName();
@@ -78,13 +78,13 @@ public class ToDoDetailsActivity extends AppCompatActivity {
 
     public void onCompButtonClick(View v) {
         //Fetch object number and name
-        int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
+        int toDoNo = (Integer) getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
         THIStoDoItem = ToDoItem.itemList.get(toDoNo);
         String thisName = THIStoDoItem.getName();
 
         //Mark it complete or incomplete
-        if(THIStoDoItem.isComplete()) {
+        if (THIStoDoItem.isComplete()) {
             THIStoDoItem.setComplete(false);
             Toast.makeText(this, thisName + " is now incomplete", Toast.LENGTH_SHORT).show();
 
@@ -104,7 +104,7 @@ public class ToDoDetailsActivity extends AppCompatActivity {
 
     public void onEdit(View v) {
         //Fetch object
-        int toDoNo = (Integer)getIntent().getExtras().get(EXTRA_TODONO);
+        int toDoNo = (Integer) getIntent().getExtras().get(EXTRA_TODONO);
         ToDoItem THIStoDoItem;
         THIStoDoItem = ToDoItem.itemList.get(toDoNo);
 
