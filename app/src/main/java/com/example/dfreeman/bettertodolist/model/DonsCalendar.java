@@ -1,4 +1,4 @@
-package com.example.dfreeman.bettertodolist;
+package com.example.dfreeman.bettertodolist.model;
 
 public class DonsCalendar {
     private int year;

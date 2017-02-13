@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -20,8 +20,8 @@
                     android:pathPrefix="/don" />
             </intent-filter>
         </activity>
-        <activity android:name=".ToDoDetailsActivity" />
-        <activity android:name=".AddNewToDoActivity" />
+        <activity android:name=".view.ToDoDetailsActivity" />
+        <activity android:name=".view.AddNewToDoActivity" />
     </application>
 
 </manifest>

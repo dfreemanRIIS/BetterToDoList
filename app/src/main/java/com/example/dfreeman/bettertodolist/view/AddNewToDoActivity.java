@@ -1,4 +1,4 @@
-package com.example.dfreeman.bettertodolist;
+package com.example.dfreeman.bettertodolist.view;
 
 import android.content.Intent;
 import android.support.v4.app.DialogFragment;
@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.dfreeman.bettertodolist.fragment.DatePickerFragment;
+import com.example.dfreeman.bettertodolist.R;
+import com.example.dfreeman.bettertodolist.fragment.TimePickerFragment;
+import com.example.dfreeman.bettertodolist.model.ToDoItem;
 
 public class AddNewToDoActivity extends AppCompatActivity {
     //Create new toDoItem

@@ -1,4 +1,4 @@
-package com.example.dfreeman.bettertodolist;
+package com.example.dfreeman.bettertodolist.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.dfreeman.bettertodolist.R;
+import com.example.dfreeman.bettertodolist.model.ToDoItem;
+import com.example.dfreeman.bettertodolist.view.AddNewToDoActivity;
+import com.example.dfreeman.bettertodolist.view.MainActivity;
 
 public class ToDoDetailsActivity extends AppCompatActivity {
 

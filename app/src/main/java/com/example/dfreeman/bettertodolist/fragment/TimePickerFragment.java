@@ -1,4 +1,4 @@
-package com.example.dfreeman.bettertodolist;
+package com.example.dfreeman.bettertodolist.fragment;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.text.format.DateFormat;
 import android.widget.TimePicker;
+
+import com.example.dfreeman.bettertodolist.view.MainActivity;
 
 import java.util.Calendar;
 

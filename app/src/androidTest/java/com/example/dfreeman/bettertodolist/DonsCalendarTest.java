@@ -1,5 +1,7 @@
 package com.example.dfreeman.bettertodolist;
 
+import com.example.dfreeman.bettertodolist.model.DonsCalendar;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

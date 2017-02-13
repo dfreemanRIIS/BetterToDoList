@@ -1,4 +1,6 @@
-package com.example.dfreeman.bettertodolist;
+package com.example.dfreeman.bettertodolist.model;
+
+import com.example.dfreeman.bettertodolist.view.MainActivity;
 
 import java.util.ArrayList;
 

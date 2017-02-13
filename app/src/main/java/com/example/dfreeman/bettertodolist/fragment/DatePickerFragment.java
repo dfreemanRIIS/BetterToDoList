@@ -1,4 +1,4 @@
-package com.example.dfreeman.bettertodolist;
+package com.example.dfreeman.bettertodolist.fragment;
 
 import android.support.annotation.NonNull;
 import android.widget.DatePicker;
@@ -6,6 +6,9 @@ import android.app.DatePickerDialog;
 import android.support.v4.app.DialogFragment;
 import android.app.Dialog;
 import android.os.Bundle;
+
+import com.example.dfreeman.bettertodolist.view.MainActivity;
+
 import java.util.Calendar;
 
 public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
